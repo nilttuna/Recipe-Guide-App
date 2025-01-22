@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE516C24-4B43-4AED-9538-DE14DA517EED}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Yazlab_YemekTarifi</RootNamespace>
+    <AssemblyName>Yazlab_YemekTarifi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IMalzeme.cs" />
+    <Compile Include="ITarif.cs" />
+    <Compile Include="KategoriEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KategoriEkle.Designer.cs">
+      <DependentUpon>KategoriEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MalzemeEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MalzemeEkle.Designer.cs">
+      <DependentUpon>MalzemeEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Malzemeler.cs" />
+    <Compile Include="MalzemeyeGoreAra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MalzemeyeGoreAra.Designer.cs">
+      <DependentUpon>MalzemeyeGoreAra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sqlConnection.cs" />
+    <Compile Include="Stok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stok.Designer.cs">
+      <DependentUpon>Stok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TarifDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TarifDetay.Designer.cs">
+      <DependentUpon>TarifDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TarifEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TarifEkle.Designer.cs">
+      <DependentUpon>TarifEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TarifGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TarifGuncelle.Designer.cs">
+      <DependentUpon>TarifGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tarifler.cs" />
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yemek_TarifiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Yemek_TarifiDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KategoriEkle.resx">
+      <DependentUpon>KategoriEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MalzemeEkle.resx">
+      <DependentUpon>MalzemeEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MalzemeyeGoreAra.resx">
+      <DependentUpon>MalzemeyeGoreAra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Stok.resx">
+      <DependentUpon>Stok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TarifDetay.resx">
+      <DependentUpon>TarifDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TarifEkle.resx">
+      <DependentUpon>TarifEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TarifGuncelle.resx">
+      <DependentUpon>TarifGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Yemek_TarifiDataSet.xsc">
+      <DependentUpon>Yemek_TarifiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Yemek_TarifiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Yemek_TarifiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Yemek_TarifiDataSet.xss">
+      <DependentUpon>Yemek_TarifiDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category_icon_183800.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hazırlanış.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_cost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\malzemeler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tarif.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG-20241006-WA0002.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arkaplan.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
